@@ -5,7 +5,35 @@
 **a. Initial design**
 
 - Briefly describe your initial UML design.
+My initial UML design focused on the main actions the system needed to support for PawPal+. The design was centered around storing pet and owner information, managing care tasks, and generating a daily care schedule.
+
+The system was designed to support three core user actions:
+- The user should be able to enter and manage basic owner and pet information.
+- The user should be able to add and edit pet care tasks, including duration and priority.
+- The user should be able to generate and view a daily care plan based on constraints and priorities.
+
+
 - What classes did you include, and what responsibilities did you assign to each?
+The main classes in the initial design were Owner, Pet, Task, and Scheduler.
+
+Owner stored the owner's name, available time, and preferences. Its responsibility was to manage owner-related information and constraints.
+Pet stored details such as the pet's name, type, age, and care notes. Its responsibility was to represent the pet and its basic care needs.
+Task stored task information such as task name, duration, priority, and category. Its responsibility was to represent individual care activities like feeding, walks, medication, or grooming.
+Scheduler stored the list of tasks, available time, and the generated daily plan. Its responsibility was to organize tasks, apply constraints and priorities, and create the daily care schedule.
+The main classes in the initial design were Owner, Pet, Task, and Scheduler.
+
+- Owner stored the owner's name, available time, and preferences. Its responsibility was to manage owner-related information and constraints.
+  Methods: update_preferences(), set_available_time()
+
+- Pet stored details such as the pet's name, type, age, and care notes. Its responsibility was to represent the pet and its basic care needs.
+  Methods: update_pet_info()
+
+- Task stored task information such as task name, duration, priority, and category. Its responsibility was to represent individual care activities like feeding, walks, medication, or grooming.
+  Methods: edit_task(), mark_complete()
+
+- Scheduler stored the list of tasks, available time, and the generated daily plan. Its responsibility was to organize tasks, apply constraints and priorities, and create the daily care schedule.
+  Methods: add_task(), generate_plan(), explain_plan()
+  
 
 **b. Design changes**
 
